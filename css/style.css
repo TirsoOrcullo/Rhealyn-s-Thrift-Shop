@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Helper */
+.hide-desktop {
+    display: none;
+}
+
+/* header */
+section.header {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/pexels-sam-lion-5709661.jpg) no-repeat center center/cover;
+}
+
+section.header .header-container {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background: rgba(0,0,0,0.5);
+
+    /* grid */
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 10px 1fr auto 10px;
+}
+
+/* Logo */
+section.header .logo-container {
+    height: 60px;
+    border-radius: 50%;
+
+    /* grid */
+    display: grid;
+    grid-column: 2/3;
+}
+
+section.header .logo-container img {
+    height: 100%;
+    border-radius: 50%;
+    width: auto;
+    margin-left: 50px;
+}
+
+/* Menu */
+section.header .nav-container {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    /* grid */
+    display: grid;
+    grid-column: 3/4;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-auto-columns: 120px;
+}
+
+section.header .nav-container a {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+section.header .nav-container li:hover {
+    font-size: 20px;
+}
+
+section.header .header-content {
+    display: flex;
+    padding: 16rem;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+section.header .header-content h1 {
+    font-size: 3rem;
+}
+
+/* Offer */
+
+section.offer {
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+
+section.offer h1 {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+section.offer .offer-container {
+    /* grid */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "box1 box2 box3";
+}
+
+section.offer .offer-text {
+    height: auto;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+
+section.offer .offer-text h2 {
+    padding: 20px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+section.offer .offer-text p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 20px 0 20px 0;
+}
+
+/* contact */
+#ContactUs {
+    background-image: linear-gradient(147deg, transparent 0%, transparent 8%,rgba(63, 106, 202,0.08) 8%, rgba(63, 106, 202,0.08) 46%,transparent 46%, transparent 100%),linear-gradient(107deg, transparent 0%, transparent 21%,rgba(63, 106, 202,0.08) 21%, rgba(63, 106, 202,0.08) 53%,transparent 53%, transparent 100%),linear-gradient(288deg, transparent 0%, transparent 35%,rgba(63, 106, 202,0.08) 35%, rgba(63, 106, 202,0.08) 91%,transparent 91%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+}
+
+section.contact {
+    width: 100%;
+    height: 100vh;
+}
+
+section.contact h1 {
+    text-align: center;
+    padding-top: 35px;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 20px;
+}
+
+section.contact .contact-container {
+    /* grid */
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "box1 box2";
+}
+
+section.contact .contact-us {
+    padding: 40px;
+    margin: 40px;
+    border: 1px solid black;
+}
+
+section.contact .contact-us p {
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+section.contact .contactUs-reminder {
+    color: red;
+    font-style: italic;
+}
+
+/* About Us */
+section.aboutUs {
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+
+section.aboutUs .aboutUs-container {
+    /* grid */
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "box1 box2";
+}
+
+section.aboutUs .about-Us:first-child{
+    grid-area: box1;
+    padding: 50px;
+}
+
+section.aboutUs .about-Us:last-child{
+    grid-area: box2;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 50px;
+}
+
+section.aboutUs .about-Us h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 10px 0 10px 0;
+}
+
+section.aboutUs .about-Us h2 {
+    padding: 5px;
+    font-size: 2rem;
+}
+
+section.aboutUs .about-Us img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+section.aboutUs .aboutUs-content {
+    font-style: italic;
+    font-weight: 700;
+    color: red;
+}
+
+/* Footer */
+
+section.footer {
+    width: 100%;
+    height: 30vh;
+    background: rgba(0,0,0,0.7);
+    padding: 30px;
+    color: #fff;
+}
+
+section.footer .footer-container {
+    /* Grid */
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+section.footer .footer-container a {
+    color: #fff; 
+}
+
+section.footer .footer-container li {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) and (min-width: 767px) {
+    /* home-page */
+    section.header .header-content{
+        padding: 14rem;
+    }
+
+    section.header .header-content h1{
+        font-size: 2.5rem;
+    }
+
+    section.header .header-content h2 {
+        font-size: 1rem;
+    }
+
+    /* Offers Section */
+    section.offer h1 {
+        font-size: 2rem;
+        padding: 5px;
+    }
+
+    section.offer .offer-container h2 {
+        font-size: 1.5rem;
+        padding: 3px;
+    }
+
+    section.offer .offer-container p {
+        font-size: 0.8rem;
+    }
+
+    section.offer .offer-container {
+        height: auto;
+        width: 100%;
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "box1 box2"
+        "box3 box3";
+    }
+
+    /* Contact */
+    section.contact h1 {
+        font-size: 2rem;
+        padding: 5px;
+    }
+
+    section.contact .contact-container p {
+        font-size: 1rem;
+        padding: 2px;
+    }
+
+    /* About Us */
+    section.aboutUs .about-Us h1 {
+        font-size: 2rem;
+    }
+
+    section.aboutUs .about-Us img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+    /* home-page */
+
+    /* Icon */
+    .hide-desktop {
+        display: block;
+    }
+
+    section.header .icon-container {
+    
+        /* grid */
+        display: grid;
+        grid-column: 3/4;
+        place-items: center;
+        justify-items: end;
+    }
+
+    /* NavMenu */
+
+    section.header .nav-container {
+        position: fixed;
+        height: 200px;
+        width: 100vw;
+        top: 60px;
+        background: rgba(0,0,0,0.8);
+
+        /* grid */
+        grid-auto-flow: row;
+        grid-auto-rows: 50px;
+        grid-auto-columns: 1fr;
+    }
+
+    section.header .nav-container li {
+        /* grid */
+        display: grid;
+        place-items: center;
+    }
+
+    /* Menu Animation */
+
+    section.header .nav-container.hide {
+        height: 0;
+    }
+    
+    section.header .nav-container.hide li {
+        display: none;
+    }
+
+    section.header .nav-container.show {
+        height: 200px;
+    }
+
+    section.header .icon-container i {
+        margin-right: 50px;
+        font-size: 30px;
+        color: #fff;
+    }
+
+
+    section.header .header-content{
+        padding: 14rem;
+    }
+
+    section.header .header-content h1{
+        font-size: 2.5rem;
+    }
+
+    section.header .header-content h2 {
+        font-size: 1rem;
+    }
+
+    /* Offers Section */
+    section.offer h1 {
+        font-size: 1.5rem;
+        padding: 3px;
+    }
+
+    section.offer .offer-container h2 {
+        font-size: 1rem;
+        padding: 2px;
+    }
+
+    section.offer .offer-container p {
+        font-size: 0.8rem;
+    }
+
+    section.offer .offer-container {
+        height: auto;
+        width: 100%;
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "box1 box2"
+        "box3 box3";
+    }
+
+    /* Contact */
+    section.contact h1 {
+        font-size: 1.5rem;
+        padding: 3px;
+    }
+
+    section.contact .contact-container p {
+        font-size: 0.9rem;
+        padding: 3px;
+    }
+
+    /* About Us */
+    section.aboutUs .about-Us h1 {
+        font-size: 1.5rem;
+    }
+
+    section.aboutUs .about-Us img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* footer */
+    section.footer {
+        padding: 20px;
+    }
+    
+    section.footer .footer-container a {
+        color: #fff; 
+        font-size: 0.9rem;
+    }
+    
+    section.footer .footer-container li {
+        padding: 2px;
+        margin-left: 3px;
+    }
+}
+
+@media (max-width: 578px) {
+    /* home-page */
+
+    /* Icon */
+    .hide-desktop {
+        display: block;
+    }
+
+    section.header .icon-container {
+    
+        /* grid */
+        display: grid;
+        grid-column: 3/4;
+        place-items: center;
+        justify-items: end;
+    }
+
+    /* NavMenu */
+
+    section.header .nav-container {
+        position: fixed;
+        height: 200px;
+        width: 100vw;
+        top: 60px;
+        background: rgba(0,0,0,0.8);
+
+        /* grid */
+        grid-auto-flow: row;
+        grid-auto-rows: 50px;
+        grid-auto-columns: 1fr;
+    }
+
+    section.header .nav-container li {
+        /* grid */
+        display: grid;
+        place-items: center;
+    }
+
+    /* Menu Animation */
+
+    section.header .nav-container.hide {
+        height: 0;
+    }
+    
+    section.header .nav-container.hide li {
+        display: none;
+    }
+
+    section.header .nav-container.show {
+        height: 200px;
+    }
+
+    section.header .icon-container i {
+        margin-right: 50px;
+        font-size: 30px;
+        color: #fff;
+    }
+
+
+    section.header .header-content{
+        padding: 12rem;
+    }
+
+    section.header .header-content h1{
+        font-size: 2rem;
+    }
+
+    section.header .header-content h2 {
+        font-size: 0.8rem;
+    }
+
+    /* Offers Section */
+    section.offer h1 {
+        font-size: 1rem;
+        padding: 2px;
+    }
+
+    section.offer .offer-container h2 {
+        font-size: 0.8rem;
+        padding: 1px;
+    }
+
+    section.offer .offer-container p {
+        font-size: 0.8rem;
+    }
+
+    section.offer .offer-container {
+        height: auto;
+        width: 100%;
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "box1"
+        "box2"
+        "box3";
+    }
+
+    /* Contact */
+    section.contact .contact-container {
+        /* grid */
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "box1"
+        "box2";
+
+    }
+    section.contact h1 {
+        font-size: 1rem;
+        padding: 2px;
+    }
+
+    section.contact .contact-container p {
+        font-size: 0.8rem;
+        padding: 2px;
+    }
+
+    section.contact .contact-us {
+        padding: 20px;
+        margin: 20px;
+        border: 1px solid black;
+    }
+
+    /* About Us */
+    section.aboutUs .about-Us h1 {
+        font-size: 2rem;
+    }
+
+    section.aboutUs .about-Us img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* footer */
+    section.footer {
+        padding: 10px;
+    }
+    
+    section.footer .footer-container a {
+        color: #fff; 
+        font-size: 0.9rem;
+    }
+    
+    section.footer .footer-container li {
+        padding: 2px;
+        margin-left: 3px;
+    }
+}
