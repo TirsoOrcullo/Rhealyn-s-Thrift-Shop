@@ -61,18 +61,21 @@ section.header .header-container {
 /* Logo */
 section.header .logo-container {
     height: 60px;
-    border-radius: 50%;
 
     /* grid */
     display: grid;
     grid-column: 2/3;
 }
 
-section.header .logo-container img {
-    height: 60px;
-    border-radius: 50%;
-    width: auto;
+section.header .logo-container h1 {
+    color: white;
     margin-left: 50px;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+section.header .logo-container h1:hover {
+    font-size: 2rem;
 }
 
 /* Menu */
