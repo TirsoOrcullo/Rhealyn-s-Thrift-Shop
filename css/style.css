@@ -581,7 +581,8 @@ section.footer .footer-container li {
     /* home section */
     section.header .logo-container h1 {
         font-size: 1rem;
-        margin-left: 0;
+        padding-top: 0;
+        margin: 18px 0 0 12px;
     }
 
     /* Offers Section */
